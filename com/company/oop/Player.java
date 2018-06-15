@@ -2,16 +2,26 @@ package com.company.oop;
 
 public class Player {
     public String name;
-    public int health;
+    public int hitPoints;
     public String weapon;
 
+    public Player(String name, int health, String weapon) {
+        this.name = name;
+        this.weapon = weapon;
+
+        if (health > 0 && health <= 100) {
+            this.hitPoints = health;
+            //
+        }
+    }
+
     public void loseHealth(int damage) {
-        this.health = this.health - damage;
-        if (this.health <= 0) {
+        this.hitPoints = this.hitPoints - damage;
+        if (this.hitPoints <= 0) {
             System.out.println("Player knocked out!");
         }
     }
     public int healthRemaining() {
-        return this.health;
+        return hitPoints;
     }
 }

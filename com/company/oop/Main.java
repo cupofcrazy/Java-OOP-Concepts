@@ -12,15 +12,13 @@ public class Main {
         System.out.println("The width of the master-bedroom is " + masterBedroom.getDresser().getWidth() + " inches");
         masterBedroom.makeBed();
 
-        // New Player Class
-        // ||
-        // vv
+        // Encapsulation
         Player player = new Player();
         player.name = "Tobi";
         player.health = 20;
         player.weapon = "Sword";
 
-        int damage = 10;
+        int damage = 20;
         player.loseHealth(damage);
         System.out.println("Remaining health: " + player.healthRemaining() + "hp");
     }
