@@ -5,7 +5,7 @@ public class Player {
     public int hitPoints;
     public String weapon;
 
-    public Player(String name, int health, String weapon) {
+    public Player(String name, String weapon, int health) {
         this.name = name;
         this.weapon = weapon;
 
@@ -13,6 +13,10 @@ public class Player {
             this.hitPoints = health;
             //
         }
+    }
+    // Default constructor
+    public Player() {
+
     }
 
     public void loseHealth(int damage) {

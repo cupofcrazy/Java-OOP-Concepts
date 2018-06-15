@@ -15,11 +15,19 @@ public class Main {
         // Encapsulation
         Player player = new Player();
         player.name = "Tobi";
-        player.health = 20;
+        player.hitPoints = 20;
         player.weapon = "Sword";
 
         int damage = 20;
         player.loseHealth(damage);
         System.out.println("Remaining health: " + player.healthRemaining() + "hp");
+
+        // Printer class created with duplex set to true
+        Printer printer = new Printer(45, 10, true);
+        // Initial pages printed
+        System.out.println("Initial number pages printed: " + printer.getPagesPrinted());
+        //Update pages to be printed
+        printer.printPages(60);
+        System.out.println("Final number of pages printed: " + printer.getPagesPrinted());
     }
 }

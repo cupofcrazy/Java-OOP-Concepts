@@ -28,9 +28,12 @@ public class Printer {
     public int printPages(int pages) {
         int pagesToPrint = pages;
         if (this.duplex) {
-            pagesToPrint /= pages;
+            pagesToPrint /= 2;
         }
         this.pagesPrinted += pagesToPrint;
         return pagesToPrint;
+    }
+    public int getPagesPrinted() {
+        return pagesPrinted;
     }
 }
