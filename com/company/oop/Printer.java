@@ -10,6 +10,7 @@ public class Printer {
         this.pagesPrinted = pagesPrinted;
         this.duplex = duplex;
     }
+    //Fill the printer with toner with a value no greater than 100
     public int fillToner(int tonerAmount) {
         if (this.tonerLevel > 0 && tonerLevel <= 100) {
             if (this.tonerLevel + tonerAmount > 100) {
@@ -23,6 +24,7 @@ public class Printer {
         return this.tonerLevel;
     }
 
+    // Print pages
     public int printPages(int pages) {
         int pagesToPrint = pages;
         if (this.duplex) {
