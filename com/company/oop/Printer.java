@@ -22,4 +22,13 @@ public class Printer {
         this.tonerLevel += tonerAmount;
         return this.tonerLevel;
     }
+
+    public int printPages(int pages) {
+        int pagesToPrint = pages;
+        if (this.duplex) {
+            pagesToPrint /= pages;
+        }
+        this.pagesPrinted += pagesToPrint;
+        return pagesToPrint;
+    }
 }
